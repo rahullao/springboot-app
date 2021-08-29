@@ -21,7 +21,8 @@ public class CurrencyExchangeService {
         if (exchangeValue == null) {
             throw new RuntimeException("Unable to find data to convert " + from + " to " + to);
         }
-        LOG.info("Exchange value '{}' to '{}' is '{}'", from, to, exchangeValue);
+        LOG.info("Exchange value '{}' to '{}' is '{}'", from, to,
+                exchangeValue.getConversionMultiple());
         return exchangeValue;
     }
 }
